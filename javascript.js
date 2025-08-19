@@ -1,9 +1,12 @@
 const container = document.querySelector('#container');
+const btn = document.querySelector('button');
 
 let square = 16;
-let squared = square * square;
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', createGrid);
+
+function createGrid() {
+    let squared = square * square;
     for (i = 0; i < squared; i++) {
         const grid = document.createElement('div');
         container.appendChild(grid);
@@ -12,4 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
             e.target.style.background = 'blue';
         })
     }
+}
+
+btn.addEventListener('click', () => {
+    square = parseInt(window.prompt('How many squares do you want on each side?'));
+    createGrid();
 })
