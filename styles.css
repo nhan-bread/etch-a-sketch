@@ -1,0 +1,7 @@
+div {
+    outline: 1px solid red;
+    height: 500px;
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+}
