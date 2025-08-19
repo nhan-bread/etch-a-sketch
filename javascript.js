@@ -19,8 +19,10 @@ function createGrid() {
 
 btn.addEventListener('click', () => {
     square = parseInt(window.prompt('How many squares do you want on each side?'));
-    while (container.firstChild) {
+    if (square <= 100 && square) {
+        while (container.firstChild) {
         container.removeChild(container.firstChild);
     }
     createGrid();
+    }
 })
