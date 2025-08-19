@@ -8,5 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const grid = document.createElement('div');
         container.appendChild(grid);
         grid.setAttribute('style', 'outline: 1px solid black; height: 20px; width: 20px;');
+        grid.addEventListener('mouseenter', (e) => {
+            e.target.style.background = 'blue';
+        })
     }
 })
