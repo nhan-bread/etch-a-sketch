@@ -10,9 +10,9 @@ function createGrid() {
     for (i = 0; i < squared; i++) {
         const grid = document.createElement('div');
         container.appendChild(grid);
-        grid.style.outline = "1px solid black";
-        grid.style.height = "60px";
-        grid.style.width = "60px";
+        grid.style.outline = '1px solid black';
+        grid.style.height = 'calc( 960px / ' + square + ')';
+        grid.style.width = 'calc( 960px / ' + square + ')';
         grid.addEventListener('mouseenter', (e) => {
             let redValue = Math.floor(Math.random() * 255);
             let greenValue = Math.floor(Math.random() * 255);
